@@ -21,6 +21,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.focus.FocusState
 import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -68,6 +69,7 @@ fun SearchTextField(
                 .fillMaxWidth()
                 .padding(spacing.spaceMedium)
                 .onFocusChanged { onFocusChanged(it) }
+                .testTag("search_textfield")
         )
         if (shouldShowHint) {
             Text(
